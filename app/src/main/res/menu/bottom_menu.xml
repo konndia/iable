@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <item
+            android:id="@+id/achievements"
+            android:icon="@drawable/trophy"
+            tools:ignore="MenuTitle" />
+
+        <item
+            android:id="@+id/navigation_dashboard"
+            android:icon="@drawable/home"
+            tools:ignore="MenuTitle" />
+
+        <item
+            android:id="@+id/add"
+            android:icon="@drawable/add"
+            tools:ignore="MenuTitle" />
+
+        <item
+            android:id="@+id/user"
+            android:icon="@drawable/user"
+            tools:ignore="MenuTitle" />
+
+        <item
+            android:id="@+id/notifications"
+            android:icon="@drawable/clock"
+            tools:ignore="MenuTitle" />
+
+</menu>

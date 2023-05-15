@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Home"
+    android:id="@+id/navigation_dashboard">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingTop="35dp"
+            android:src="@drawable/iableiable" />
+
+        <ImageView
+            android:id="@+id/drawer_menu"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:paddingLeft="6dp"
+            android:paddingTop="29dp"
+            android:src="@drawable/burger_menu">
+        </ImageView>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="135dp"
+        android:layout_below="@+id/logo">
+
+        <TextView
+            android:id="@+id/greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:fontFamily="@font/ubuntu_medium"
+            android:paddingLeft="25dp"
+            android:paddingTop="40dp"
+            android:text="Доброе Утро, Мария!"
+            android:textColor="#000000"
+            android:textSize="20sp">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/greetingPhrases"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_below="@+id/greeting"
+            android:paddingLeft="25dp"
+            android:text="Вы сегодня потрясны!"
+            android:textColor="#000000"
+            android:textSize="16sp"></TextView>
+
+        <TextView
+            android:id="@+id/activityInfo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/greetingPhrases"
+            android:layout_marginTop="9dp"
+            android:paddingLeft="25dp"
+            android:paddingTop="6dp"
+            android:text="Сводка активности"
+            android:textColor="#000000"
+            android:textSize="16sp"></TextView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:id="@+id/activityMenu">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/activity">
+
+                <TextView
+                    android:layout_width="124dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Шаги"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/activity">
+
+                <TextView
+                    android:layout_width="124dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Активность"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/activity">
+
+                <TextView
+                    android:layout_width="124dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="26dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Другая"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/moodTrackingText"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:paddingLeft="25dp"
+            android:text="Хотите отметить настроение?"
+            android:textColor="#000000"
+            android:textSize="16sp">
+        </TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/moodTrackingText"
+            android:src="@drawable/rectangle_10mood">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_below="@id/moodTrackingText">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </ImageView>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/waterTrackingText"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:paddingLeft="25dp"
+            android:text="Выпитая вода"
+            android:textColor="#000000"
+            android:textSize="16sp">
+        </TextView>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/waterTrackingText"
+            android:src="@drawable/rectangle_8">
+        </ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="10dp"
+            android:layout_below="@id/waterTrackingText">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+            </ImageView>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>
