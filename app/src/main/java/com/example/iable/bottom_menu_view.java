@@ -4,10 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
-import androidx.fragment.app.DialogFragment;
 
 import android.os.Bundle;
-import android.view.LayoutInflater;
 
 import com.example.iable.databinding.ActivityBottomMenuViewBinding;
 public class bottom_menu_view extends AppCompatActivity {
@@ -32,8 +30,11 @@ public class bottom_menu_view extends AppCompatActivity {
                 case R.id.user:
                     replaceFragment(new User());
                     break;
-                case R.id.notifications:
+                case R.id.notifFrag:
                     replaceFragment(new Notifications());
+                    break;
+                case R.id.add:
+                    replaceFragment(new Add());
                     break;
             }
             return true;

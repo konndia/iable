@@ -23,7 +23,7 @@
             tools:ignore="MenuTitle" />
 
         <item
-            android:id="@+id/notifications"
+            android:id="@+id/notifFrag"
             android:icon="@drawable/clock"
             tools:ignore="MenuTitle" />
 
