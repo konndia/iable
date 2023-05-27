@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignIn">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="441dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Введите почту"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="315dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Введите пароль"
+        android:textColor="@color/black"
+        android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/email_sign_in"
+        android:layout_width="326dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="236dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="395dp"
+        android:ems="10"
+        android:hint="Почта"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button_sign_in"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="127dp"
+        android:layout_marginTop="424dp"
+        android:layout_marginEnd="128dp"
+        android:layout_marginBottom="210dp"
+        android:background="@drawable/gradient"
+        android:fontFamily="@font/ubuntu_medium"
+        android:insetTop="6dp"
+        android:text="Войти"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        app:cornerRadius="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/password_sign_in"
+        android:layout_width="326dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="307dp"
+        android:ems="10"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="550dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:text="Вход"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

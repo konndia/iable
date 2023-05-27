@@ -6,29 +6,29 @@
     android:layout_height="match_parent"
     android:backgroundTint="#679CE5"
     android:theme="@android:style/Theme.Black.NoTitleBar"
-    tools:context=".MainActivity">
+    tools:context=".SignUp">
 
-    <RelativeLayout
-        android:id="@+id/navigation_dashboard"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/navigation_dashboard"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:paddingTop="35dp"
-            android:src="@drawable/iableiable" />
+<!--        <ImageView-->
+<!--            android:id="@+id/logo"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:paddingTop="35dp"-->
+<!--            android:src="@drawable/iableiable" />-->
 
-        <ImageView
-            android:layout_width="40dp"
-            android:layout_height="50dp"
-            android:paddingLeft="6dp"
-            android:paddingTop="29dp"
-            android:src="@drawable/burger_menu">
+<!--        <ImageView-->
+<!--            android:layout_width="40dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:paddingLeft="6dp"-->
+<!--            android:paddingTop="29dp"-->
+<!--            android:src="@drawable/burger_menu">-->
 
-        </ImageView>
-    </RelativeLayout>
+<!--        </ImageView>-->
+<!--    </RelativeLayout>-->
 
     <TextView
         android:id="@+id/textView5"
@@ -67,7 +67,7 @@
     <Button
         android:id="@+id/button_register"
         android:layout_width="120dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:layout_marginStart="127dp"
         android:layout_marginTop="424dp"
         android:layout_marginEnd="128dp"
@@ -89,12 +89,12 @@
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="209dp"
-        android:layout_marginEnd="318dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="170dp"
         android:layout_marginBottom="441dp"
         android:fontFamily="@font/ubuntu_light"
-        android:text="Ваше имя"
+        android:text="Введите почту"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -103,16 +103,16 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/email_register"
         android:layout_width="326dp"
         android:layout_height="50dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="40dp"
         android:layout_marginTop="236dp"
-        android:layout_marginEnd="58dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginBottom="395dp"
         android:ems="10"
-        android:hint="Введите имя"
-        android:inputType="textPersonName"
+        android:hint="Введите почту"
+        android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -122,101 +122,101 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="302dp"
-        android:layout_marginEnd="352dp"
-        android:layout_marginBottom="348dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="315dp"
         android:fontFamily="@font/ubuntu_light"
-        android:text="Рост"
+        android:text="Введите пароль"
         android:textColor="@color/black"
         android:textSize="15sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/password_register"
+        android:layout_width="326dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="307dp"
+        android:ems="10"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.72" />
+
+    <TextView
+        android:id="@+id/haveAccountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="530dp"
+        android:layout_marginEnd="170dp"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Уже есть аккаунт?"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/sign_in_txt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="154dp"
-        android:layout_marginTop="302dp"
-        android:layout_marginEnd="195dp"
-        android:layout_marginBottom="348dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="60dp"
         android:fontFamily="@font/ubuntu_light"
-        android:text="Вес"
+        android:text="Войти"
         android:textColor="@color/black"
-        android:textSize="15sp"
+        android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/haveAccountText" />
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="273dp"
-        android:layout_marginTop="302dp"
-        android:layout_marginEnd="46dp"
-        android:layout_marginBottom="348dp"
-        android:fontFamily="@font/ubuntu_light"
-        android:text="Возраст"
-        android:textColor="@color/black"
-        android:textSize="15sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--    <EditText-->
+<!--        android:id="@+id/weight"-->
+<!--        android:layout_width="86dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginStart="144dp"-->
+<!--        android:layout_marginTop="324dp"-->
+<!--        android:layout_marginEnd="145dp"-->
+<!--        android:layout_marginBottom="307dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="Вес"-->
+<!--        android:inputType="number"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.72" />-->
 
-    <EditText
-        android:id="@+id/editTextNumber"
-        android:layout_width="86dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="324dp"
-        android:layout_marginBottom="307dp"
-        android:ems="10"
-        android:hint="Рост"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72" />
-
-    <EditText
-        android:id="@+id/editTextNumber2"
-        android:layout_width="86dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="144dp"
-        android:layout_marginTop="324dp"
-        android:layout_marginEnd="145dp"
-        android:layout_marginBottom="307dp"
-        android:ems="10"
-        android:hint="Вес"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72" />
-
-    <EditText
-        android:id="@+id/editTextNumber3"
-        android:layout_width="86dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="264dp"
-        android:layout_marginTop="324dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="307dp"
-        android:ems="10"
-        android:hint="Возраст"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.472"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72" />
+<!--    <EditText-->
+<!--        android:id="@+id/age"-->
+<!--        android:layout_width="86dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginStart="264dp"-->
+<!--        android:layout_marginTop="324dp"-->
+<!--        android:layout_marginEnd="25dp"-->
+<!--        android:layout_marginBottom="307dp"-->
+<!--        android:ems="10"-->
+<!--        android:hint="Возраст"-->
+<!--        android:inputType="number"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.472"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:layout_constraintVertical_bias="0.72" />-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

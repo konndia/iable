@@ -8,7 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import android.os.Bundle;
 
 import com.example.iable.databinding.ActivityBottomMenuViewBinding;
-public class bottom_menu_view extends AppCompatActivity {
+public class BottomMenuView extends AppCompatActivity {
 
     ActivityBottomMenuViewBinding binding;
 

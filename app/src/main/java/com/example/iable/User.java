@@ -1,26 +1,29 @@
 package com.example.iable;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link User#newInstance} factory method to
- * create an instance of this fragment.
- */
+import com.google.firebase.auth.FirebaseAuth;
+
+
 public class User extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+//    //мой код
+//    private TextView logout_txt;
+//    private FirebaseAuth auth;
+//    //конец
+
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
@@ -28,15 +31,6 @@ public class User extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment User.
-     */
-    // TODO: Rename and change types and number of parameters
     public static User newInstance(String param1, String param2) {
         User fragment = new User();
         Bundle args = new Bundle();
@@ -48,6 +42,23 @@ public class User extends Fragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        //мой код
+
+//        logout_txt = (TextView) getView().findViewById(R.id.logout_txt);
+//        auth = FirebaseAuth.getInstance();
+//        logout_txt.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                auth.signOut();
+//                Intent intent = new Intent(getActivity(), SignUp.class);
+//                startActivity(intent);
+////                FragmentManager fm = getActivity().getSupportFragmentManager();
+////                fm.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+//            }
+//        });
+        //конец
+
+
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
