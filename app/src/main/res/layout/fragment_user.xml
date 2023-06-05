@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".User"
-    android:id="@+id/user">
+    android:id="@+id/bottom_user">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -30,6 +30,15 @@
         </ImageView>
     </RelativeLayout>
 
-
+    <TextView
+        android:id="@+id/logout_txt"
+        android:layout_width="160dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="530dp"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/ubuntu_light"
+        android:text="Выйти из аккаунта"
+        android:textSize="18dp"
+        android:textColor="@color/black" />
 
 </FrameLayout>

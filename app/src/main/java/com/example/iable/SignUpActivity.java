@@ -17,49 +17,59 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
-public class SignIn extends AppCompatActivity {
 
-    private EditText email_sign_in;
-    private EditText password_sign_in;
-    private Button button_sign_in;
+public class SignUpActivity extends AppCompatActivity {
 
+    private EditText email_register;
+    private EditText password_register;
+    private TextView sign_in_txt;
+    private Button button_register;
     FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_in);
+        setContentView(R.layout.activity_sign_up);
 
-        email_sign_in = findViewById(R.id.email_sign_in);
-        password_sign_in = findViewById(R.id.password_sign_in);
-        button_sign_in = findViewById(R.id.button_sign_in);
+        email_register = findViewById(R.id.email_register);
+        password_register = findViewById(R.id.password_register);
+        button_register = findViewById(R.id.button_register);
+        sign_in_txt = findViewById(R.id.sign_in_txt);
 
         auth = FirebaseAuth.getInstance();
+
+        sign_in_txt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(SignUpActivity.this, SignInActivity.class);
+                startActivity(intent);
+            }
+        });
 
         FirebaseUser user = auth.getCurrentUser();
         if (user != null) {
             // User is signed in
-            Intent intent = new Intent(SignIn.this, BottomMenuView.class);
+            Intent intent = new Intent(SignUpActivity.this, HomeActivity.class);
             startActivity(intent);
             finish();
         } else {
 
-            button_sign_in.setOnClickListener(new View.OnClickListener() {
+            button_register.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (email_sign_in.getText().toString().isEmpty() || password_sign_in.getText().toString().isEmpty()) {
-                        Toast.makeText(SignIn.this, "Поля не могут быть пустыми", Toast.LENGTH_SHORT).show();
+                    if (email_register.getText().toString().isEmpty() || password_register.getText().toString().isEmpty()) {
+                        Toast.makeText(SignUpActivity.this, "Поля не могут быть пустыми", Toast.LENGTH_SHORT).show();
                     } else {
-                        auth.signInWithEmailAndPassword(email_sign_in.getText().toString(), password_sign_in.getText().toString())
+                        auth.createUserWithEmailAndPassword(email_register.getText().toString(), password_register.getText().toString())
                                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {
                                         if (task.isSuccessful()) {
-                                            Intent intent = new Intent(SignIn.this, BottomMenuView.class);
+                                            Intent intent = new Intent(SignUpActivity.this, HomeActivity.class);
                                             startActivity(intent);
                                             finish();
                                         } else {
-                                            Toast.makeText(SignIn.this,
+                                            Toast.makeText(SignUpActivity.this,
                                                     "Ошибка. Проверьте все поля и попробуйте снова", Toast.LENGTH_SHORT).show();
                                         }
                                     }

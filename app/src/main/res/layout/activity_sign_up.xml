@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:backgroundTint="#679CE5"
     android:theme="@android:style/Theme.Black.NoTitleBar"
-    tools:context=".SignUp">
+    tools:context=".SignUpActivity">
 
 <!--    <RelativeLayout-->
 <!--        android:id="@+id/navigation_dashboard"-->

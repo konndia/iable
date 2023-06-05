@@ -8,7 +8,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -17,59 +16,49 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+public class SignInActivity extends AppCompatActivity {
 
-public class SignUp extends AppCompatActivity {
+    private EditText email_sign_in;
+    private EditText password_sign_in;
+    private Button button_sign_in;
 
-    private EditText email_register;
-    private EditText password_register;
-    private TextView sign_in_txt;
-    private Button button_register;
     FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_sign_in);
 
-        email_register = findViewById(R.id.email_register);
-        password_register = findViewById(R.id.password_register);
-        button_register = findViewById(R.id.button_register);
-        sign_in_txt = findViewById(R.id.sign_in_txt);
+        email_sign_in = findViewById(R.id.email_sign_in);
+        password_sign_in = findViewById(R.id.password_sign_in);
+        button_sign_in = findViewById(R.id.button_sign_in);
 
         auth = FirebaseAuth.getInstance();
-
-        sign_in_txt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(SignUp.this, SignIn.class);
-                startActivity(intent);
-            }
-        });
 
         FirebaseUser user = auth.getCurrentUser();
         if (user != null) {
             // User is signed in
-            Intent intent = new Intent(SignUp.this, BottomMenuView.class);
+            Intent intent = new Intent(SignInActivity.this, HomeActivity.class);
             startActivity(intent);
             finish();
         } else {
 
-            button_register.setOnClickListener(new View.OnClickListener() {
+            button_sign_in.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if (email_register.getText().toString().isEmpty() || password_register.getText().toString().isEmpty()) {
-                        Toast.makeText(SignUp.this, "Поля не могут быть пустыми", Toast.LENGTH_SHORT).show();
+                    if (email_sign_in.getText().toString().isEmpty() || password_sign_in.getText().toString().isEmpty()) {
+                        Toast.makeText(SignInActivity.this, "Поля не могут быть пустыми", Toast.LENGTH_SHORT).show();
                     } else {
-                        auth.createUserWithEmailAndPassword(email_register.getText().toString(), password_register.getText().toString())
+                        auth.signInWithEmailAndPassword(email_sign_in.getText().toString(), password_sign_in.getText().toString())
                                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                                     @Override
                                     public void onComplete(@NonNull Task<AuthResult> task) {
                                         if (task.isSuccessful()) {
-                                            Intent intent = new Intent(SignUp.this, BottomMenuView.class);
+                                            Intent intent = new Intent(SignInActivity.this, HomeActivity.class);
                                             startActivity(intent);
                                             finish();
                                         } else {
-                                            Toast.makeText(SignUp.this,
+                                            Toast.makeText(SignInActivity.this,
                                                     "Ошибка. Проверьте все поля и попробуйте снова", Toast.LENGTH_SHORT).show();
                                         }
                                     }

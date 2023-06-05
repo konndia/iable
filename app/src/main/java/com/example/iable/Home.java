@@ -15,8 +15,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.widget.Button;
 
 public class Home extends Fragment {
-
-    ImageButton buttonDrawerMenu;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
@@ -52,14 +50,6 @@ public class Home extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_home, container, false);
-        drawer_menu = (ImageButton) rootView.findViewById(R.id.drawer_menu);
-        drawer_menu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Home.this.getActivity(), DrawerMenu.class);
-                startActivity(intent);
-            }
-        });
         return rootView;
     }
 }

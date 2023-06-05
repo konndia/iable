@@ -3,27 +3,27 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
         <item
-            android:id="@+id/achievements"
+            android:id="@+id/bottom_achievements"
             android:icon="@drawable/trophy"
             tools:ignore="MenuTitle" />
 
         <item
-            android:id="@+id/navigation_dashboard"
+            android:id="@+id/bottom_home"
             android:icon="@drawable/home"
             tools:ignore="MenuTitle" />
 
         <item
-            android:id="@+id/add"
+            android:id="@+id/bottom_add"
             android:icon="@drawable/add"
             tools:ignore="MenuTitle" />
 
         <item
-            android:id="@+id/user"
+            android:id="@+id/bottom_user"
             android:icon="@drawable/user"
             tools:ignore="MenuTitle" />
 
         <item
-            android:id="@+id/notifFrag"
+            android:id="@+id/bottom_notifications"
             android:icon="@drawable/clock"
             tools:ignore="MenuTitle" />
 

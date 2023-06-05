@@ -3,13 +3,13 @@
 
     <item
         android:state_selected="true"
-        android:color="@color/purple_700">
+        android:color="@color/gray">
 
     </item>
 
     <item
         android:state_selected="false"
-        android:color="@color/purple_500">
+        android:color="@color/gray">
 
     </item>
 

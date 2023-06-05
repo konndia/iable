@@ -6,13 +6,12 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
 
-public class DrawerMenu extends AppCompatActivity {
+public class DrawerMenuActivity extends AppCompatActivity {
 
     ImageButton buttonBackToMain;
     TextView logout_txt;
@@ -32,7 +31,7 @@ public class DrawerMenu extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 auth.signOut();
-                Intent intent = new Intent(DrawerMenu.this, SignUp.class);
+                Intent intent = new Intent(DrawerMenuActivity.this, SignUpActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -41,7 +40,7 @@ public class DrawerMenu extends AppCompatActivity {
         buttonBackToMain.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(DrawerMenu.this, Home.class);
+                Intent intent = new Intent(DrawerMenuActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
             }
