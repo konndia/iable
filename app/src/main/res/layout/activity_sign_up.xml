@@ -177,7 +177,7 @@
         android:layout_marginBottom="60dp"
         android:fontFamily="@font/ubuntu_light"
         android:text="Войти"
-        android:textColor="@color/black"
+        android:textColor="@color/blue"
         android:textSize="14sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

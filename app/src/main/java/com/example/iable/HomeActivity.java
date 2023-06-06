@@ -6,8 +6,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.database.FirebaseDatabase;
+import com.example.iable.Models.User;
+import com.rengwuxian.materialedittext.MaterialEditText;
+
+import org.w3c.dom.Text;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -17,6 +23,9 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         ImageButton drawer_menu = findViewById(R.id.drawer_menu);
+//        User user = new User();
+//        TextView greeting = findViewById(R.id.greeting);
+//        greeting.setText(user.getName());
 
         drawer_menu.setOnClickListener(new View.OnClickListener() {
             @Override
