@@ -36,7 +36,6 @@
         android:fontFamily="@font/ubuntu_medium"
         android:layout_marginStart="24dp"
         android:layout_marginTop="100dp"
-        android:text="Доброе утро, Мария!"
         android:textColor="#000000"
         android:textSize="24sp">
 

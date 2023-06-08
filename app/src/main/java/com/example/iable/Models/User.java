@@ -1,13 +1,13 @@
 package com.example.iable.Models;
 
 public class User {
-    private String email, pass, name, height, weight, age;
+    private String email_registration, password_registration, name, height, weight, age;
 
     public User() {}
 
-    public User(String name, String height, String weight, String age) {
-        this.email = email;
-        this.pass = pass;
+    public User(String email_registration, String password_registration, String name, String height, String weight, String age) {
+        this.email_registration = email_registration;
+        this.password_registration = password_registration;
         this.name = name;
         this.height= height;
         this.weight = weight;
@@ -15,19 +15,19 @@ public class User {
     }
 
     public String getEmail() {
-        return email;
+        return email_registration;
     }
 
     public void setEmail(String email) {
-        this.email = email;
+        this.email_registration = email;
     }
 
     public String getPass() {
-        return pass;
+        return password_registration;
     }
 
     public void setPass(String pass) {
-        this.pass = pass;
+        this.password_registration = pass;
     }
 
     public String getName() {
