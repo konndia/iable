@@ -49,7 +49,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/greeting"
-        android:text="Вы сегодня потрясны!"
+        android:text=""
         android:textColor="#000000"
         android:textSize="15sp">
     </TextView>
@@ -76,22 +76,38 @@
             android:id="@+id/activityMenu">
 
             <RelativeLayout
+                android:id="@+id/steps_counter"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/activity">
 
                 <TextView
+                    android:id="@+id/stepsTextView"
                     android:layout_width="124dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginStart="7dp"
-                    android:layout_marginTop="26dp"
+                    android:layout_marginTop="5dp"
                     android:fontFamily="@font/ubuntu_medium"
                     android:text="Шаги"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/stepsCount"
+                    android:layout_width="124dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="30dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="0"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="20sp" />
             </RelativeLayout>
 
             <RelativeLayout
@@ -157,6 +173,74 @@
             android:layout_below="@id/moodTrackingText"
             android:src="@drawable/rectangle_10mood">
         </ImageView>
+
+        <LinearLayout
+            android:layout_width="340dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="2sp"
+            android:layout_centerHorizontal="true">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7sp">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/sad_selector">
+                </CheckBox>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7sp">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/smile_selector">
+                </CheckBox>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7sp">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/sad_selector">
+                </CheckBox>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7sp">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/smile_selector">
+                </CheckBox>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="7sp">
+
+                <CheckBox
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:button="@drawable/sad_selector">
+                </CheckBox>
+            </RelativeLayout>
+        </LinearLayout>
     </RelativeLayout>
 
     <RelativeLayout
