@@ -106,7 +106,7 @@ public class PedometerActivity extends AppCompatActivity implements SensorEventL
 
     private void loadData() {
         SharedPreferences sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE);
-        int savedNumber = (int) sharedPref.getFloat("key1", 0f);
+        int savedNumber = Integer.parseInt(sharedPref.getString("key1", "0"));
         previewsTotalSteps = savedNumber;
     }
 

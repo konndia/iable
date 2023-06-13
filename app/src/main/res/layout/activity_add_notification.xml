@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNotificationActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="112dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="89dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="Добавить напоминание"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <ImageButton
+        android:id="@+id/backToNotif"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="53dp"
+        android:background="@drawable/arrow_back"
+        android:backgroundTint="@null"
+        android:scaleType="fitXY"
+        android:src="@drawable/arrow_back" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="114dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="название"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/titleEditText"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="140dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="195dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="дополнение"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:id="@+id/contentEditText"
+        android:layout_width="307dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="text"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="221dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="276dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="время"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/timeButton"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:text="+"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="311dp"
+        app:cornerRadius="20dp"
+        android:insetTop="6dp"
+        android:textAllCaps="false"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="364dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="день недели"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/mondayCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="пн"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="400dp"/>
+
+    <CheckBox
+        android:id="@+id/tuesdayCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="вт"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="400dp"/>
+
+    <CheckBox
+        android:id="@+id/wednesdayCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ср"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="400dp"/>
+
+    <CheckBox
+        android:id="@+id/thursdayCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="чт"
+        android:layout_marginStart="245dp"
+        android:layout_marginTop="400dp"/>
+
+    <CheckBox
+        android:id="@+id/fridayCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="пт"
+        android:layout_marginStart="315dp"
+        android:layout_marginTop="400dp"/>
+
+    <CheckBox
+        android:id="@+id/saturdayCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="сб"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="440dp"/>
+
+    <CheckBox
+        android:id="@+id/sundayCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="вс"
+        android:layout_marginStart="105dp"
+        android:layout_marginTop="440dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="490dp"
+        android:fontFamily="@font/ubuntu_medium"
+        android:text="частота"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/btnAddNotification"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:background="@drawable/gradient"
+        android:fontFamily="@font/ubuntu_medium"
+        android:layout_marginTop="630dp"
+        android:layout_centerHorizontal="true"
+        android:insetTop="6dp"
+        android:textAllCaps="false"
+        android:textSize="18dp"
+        android:textColor="@color/white"
+        app:cornerRadius="13dp"
+        android:text="Готово"
+        />
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="525dp">
+        <RadioButton
+            android:id="@+id/repeatableCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="повторяющееся"/>
+        <RadioButton
+            android:id="@+id/onetimeCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="разовое"/>
+    </RadioGroup>
+
+</RelativeLayout>

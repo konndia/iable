@@ -168,6 +168,7 @@
         android:insetTop="6dp"
         android:textAllCaps="false"
         android:textSize="18dp"
+        android:textColor="@color/white"
         app:cornerRadius="13dp"
         android:text="Изменить" />
 </RelativeLayout>

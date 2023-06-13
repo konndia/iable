@@ -68,6 +68,7 @@
         android:fontFamily="@font/ubuntu_medium"
         android:insetTop="6dp"
         android:text="Войти"
+        android:textColor="@color/white"
         android:textAllCaps="false"
         android:textSize="18dp"
         app:cornerRadius="13dp"

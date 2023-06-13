@@ -55,7 +55,7 @@
     </ImageButton>
 
     <TextView
-        android:id="@+id/textView11"
+        android:id="@+id/addNotifText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -63,4 +63,6 @@
         android:fontFamily="@font/ubuntu_bold"
         android:textSize="16sp"
         android:text="+ добавить" />
+
+
 </RelativeLayout>

@@ -1,18 +1,17 @@
 package com.example.iable.Models;
 
 public class User {
-    private String email_registration, password_registration, name, height, weight, age, stepsCount;
+    private String email_registration, password_registration, name, height, weight, age;
 
     public User() {}
 
-    public User(String email_registration, String password_registration, String name, String height, String weight, String age, String stepsCount) {
+    public User(String email_registration, String password_registration, String name, String height, String weight, String age) {
         this.email_registration = email_registration;
         this.password_registration = password_registration;
         this.name = name;
         this.height= height;
         this.weight = weight;
         this.age = age;
-        this.stepsCount = stepsCount;
     }
 
     public String getEmail() {
@@ -61,13 +60,5 @@ public class User {
 
     public void setAge(String age) {
         this.age = age;
-    }
-
-    public String getStepsCount() {
-        return stepsCount;
-    }
-
-    public void setStepsCount(String stepsCount) {
-        this.stepsCount = stepsCount;
     }
 }
