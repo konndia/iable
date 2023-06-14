@@ -28,7 +28,7 @@
             style="?android:attr/progressBarStyleHorizontal"
             android:layout_width="300dp"
             android:layout_height="300dp"
-            android:max="8000"
+            android:max="10000"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:background="@drawable/circular_shape"
@@ -68,5 +68,66 @@
         android:scaleType="fitXY"
         app:srcCompat="@drawable/arrow_back" />
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="580dp"
+        android:layout_centerHorizontal="true"
+        android:paddingTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pedometer">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_centerHorizontal="true"
+                android:text="Расстояние"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:fontFamily="@font/ubuntu_medium"/>
+
+            <TextView
+                android:id="@+id/steps_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textSize="18sp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="0 м"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/pedometer">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:layout_centerHorizontal="true"
+                android:text="Калории"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:fontFamily="@font/ubuntu_medium"/>
+
+            <TextView
+                android:id="@+id/kcal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:fontFamily="@font/ubuntu_medium"
+                android:text="0 ккал"/>
+        </RelativeLayout>
+    </LinearLayout>
 
 </RelativeLayout>

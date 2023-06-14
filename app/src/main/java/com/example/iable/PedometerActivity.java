@@ -1,5 +1,6 @@
 package com.example.iable;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Context;
@@ -17,6 +18,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.iable.Models.User;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class PedometerActivity extends AppCompatActivity implements SensorEventListener {
 
@@ -25,15 +32,24 @@ public class PedometerActivity extends AppCompatActivity implements SensorEventL
     public int totalSteps = 0;
     private int previewsTotalSteps = 0;
     private ProgressBar progressBar;
-    private TextView steps;
+    private TextView steps, steps_number, kcal;
     ImageButton btn_back;
+    FirebaseDatabase db;
+    DatabaseReference users;
+    String weight;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pedometer);
 
+        steps_number = findViewById(R.id.steps_number);
+        kcal = findViewById(R.id.kcal);
+
         progressBar = findViewById(R.id.progressBar);
         steps = findViewById(R.id.steps);
+
+        db = FirebaseDatabase.getInstance("https://iable-72f9a-default-rtdb.europe-west1.firebasedatabase.app/");
+        users = db.getReference("Users").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
 
         resetSteps();
         loadData();
@@ -74,6 +90,30 @@ public class PedometerActivity extends AppCompatActivity implements SensorEventL
             steps.setText(String.valueOf(currentSteps));
 
             progressBar.setProgress(currentSteps);
+
+            double averageStepLength = 0.7;
+            int distance = (int) (averageStepLength * currentSteps);
+            steps_number.setText(distance + " м");
+
+            double averageKcal = 0.7;
+            users.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    weight = snapshot.child("weight").getValue(String.class);
+                    int weightNumber = Integer.parseInt(weight.trim());
+                    double kCalOnMeter = averageKcal * weightNumber / 1000;
+                    int kCalValue = (int) (kCalOnMeter * distance);
+                    kcal.setText(kCalValue + " cal");
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+                }
+            });
+
+//            User user = new User();
+//            user.setStepsCount(currentSteps, "steps");
+//            users.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user);
         }
     }
 

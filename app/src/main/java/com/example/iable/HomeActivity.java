@@ -42,6 +42,7 @@ public class HomeActivity extends AppCompatActivity {
     public TextView greeting, greetingPhrases, stepsCount;
     public String name;
     public String dayTime;
+    int steps;
     FirebaseDatabase db;
     DatabaseReference users;
     RelativeLayout steps_counter;
@@ -79,6 +80,18 @@ public class HomeActivity extends AppCompatActivity {
             public void onCancelled(@NonNull DatabaseError error) {
             }
         });
+//        users.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                steps = snapshot.child("stepsCount").getValue(Integer.class);
+//                stepsCount = (TextView)findViewById(R.id.stepsTextView);
+//                stepsCount.setText(steps + " шагов");
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//            }
+//        });
 
         //вывод рандомных фраз
         Random random = new Random();

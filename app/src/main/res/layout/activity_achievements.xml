@@ -6,10 +6,188 @@
     android:layout_height="match_parent"
     tools:context=".AchievementsActivity">
 
-    <!--    <FrameLayout-->
-    <!--        android:layout_width="match_parent"-->
-    <!--        android:layout_height="match_parent"-->
-    <!--        android:id="@+id/frame_layout"/>-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp"
+        android:fontFamily="@font/ubuntu_bold"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        android:text="Список достижений" />
+
+    <ImageButton
+        android:id="@+id/drawer_menu"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/burger_menu"
+        android:backgroundTint="@null"
+        android:contentDescription="Drawer Menu"
+        android:scaleType="fitXY"
+        android:src="@drawable/burger_menu">
+    </ImageButton>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        app:srcCompat="@drawable/user" />
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/ubuntu_bold"
+        android:textColor="@color/black"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="125dp"
+        android:textSize="24dp"
+        android:text="Мария" />
+
+    <RelativeLayout
+        android:id="@+id/travelling"
+        android:layout_width="400dp"
+        android:layout_height="180dp"
+        android:background="@drawable/journey"
+        android:layout_marginTop="160dp"
+        android:layout_marginStart="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Путешествие"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textSize="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ходить, чтобы сохранить здоровье"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textSize="13dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/10"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_bold"
+            android:textSize="24dp"
+            android:layout_marginTop="95dp"
+            android:layout_marginStart="30dp"/>
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/running"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="280dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="180dp"
+        android:background="@drawable/active_user"
+        android:layout_marginTop="320dp"
+        android:layout_marginStart="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Активный пользователь"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textSize="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Самоорганизация - залог успеха"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textSize="13dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/10"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_bold"
+            android:textSize="24dp"
+            android:layout_marginTop="95dp"
+            android:layout_marginStart="30dp"/>
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/icon_user"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="280dp"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="400dp"
+        android:layout_height="180dp"
+        android:background="@drawable/water_gradient"
+        android:layout_marginTop="480dp"
+        android:layout_marginStart="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Выпитая вода"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textSize="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Вода - источник жизни"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_medium"
+            android:textSize="13dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="30dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0/10"
+            android:textColor="@color/white"
+            android:fontFamily="@font/ubuntu_bold"
+            android:textSize="24dp"
+            android:layout_marginTop="95dp"
+            android:layout_marginStart="30dp"/>
+
+        <ImageView
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            android:src="@drawable/glass"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="280dp"/>
+
+    </RelativeLayout>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
