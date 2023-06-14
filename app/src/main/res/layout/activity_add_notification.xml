@@ -204,12 +204,12 @@
             android:id="@+id/repeatableCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="повторяющееся"/>
+            android:text="Повторяющееся"/>
         <RadioButton
             android:id="@+id/onetimeCheckBox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="разовое"/>
+            android:text="Разовое"/>
     </RadioGroup>
 
 </RelativeLayout>
