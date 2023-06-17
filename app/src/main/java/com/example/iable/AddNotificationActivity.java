@@ -50,29 +50,28 @@ public class AddNotificationActivity extends AppCompatActivity {
         if(noteTitle == null || noteTitle.isEmpty()){
             titleEditText.setError("Введите название");
             return;
+        } else {
+            Intent intent = new Intent(AddNotificationActivity.this, NotificationsActivity.class);
+            startActivity(intent);
+            finish();
         }
-        Note note = new Note();
-        note.setTitle(noteTitle);
-        note.setContent(noteContent);
-
-        saveNoteToFirebase(note);
     }
 
-    void saveNoteToFirebase (Note note) {
-        DocumentReference documentReference;
-        documentReference = Utility.getCollectionReferenceForNotes().document();
-
-        documentReference.set(note).addOnCompleteListener(new OnCompleteListener<Void>() {
-            @Override
-            public void onComplete(@NonNull Task<Void> task) {
-                if (task.isSuccessful()){
-                    //note is added
-                    Utility.showToast(AddNotificationActivity.this, "Напоминание добавлено");
-                    finish();
-                } else {
-                    Utility.showToast(AddNotificationActivity.this, "Напоминание НЕ добавлено");
-                }
-            }
-        });
-    }
+//    void saveNoteToFirebase (Note note) {
+//        DocumentReference documentReference;
+//        documentReference = Utility.getCollectionReferenceForNotes().document();
+//
+//        documentReference.set(note).addOnCompleteListener(new OnCompleteListener<Void>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Void> task) {
+//                if (task.isSuccessful()){
+//                    //note is added
+//                    Utility.showToast(AddNotificationActivity.this, "Напоминание добавлено");
+//                    finish();
+//                } else {
+//                    Utility.showToast(AddNotificationActivity.this, "Напоминание НЕ добавлено");
+//                }
+//            }
+//        });
+//    }
 }

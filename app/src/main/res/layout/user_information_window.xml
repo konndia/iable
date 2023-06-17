@@ -16,6 +16,17 @@
         <com.rengwuxian.materialedittext.MaterialEditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/emailField"
+            android:hint="Почта"
+            android:inputType="textEmailAddress"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:met_singleLineEllipsis="true"
+            app:met_maxCharacters="15"/>
+        <com.rengwuxian.materialedittext.MaterialEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/nameField"
             android:hint="Имя"
             android:inputType="text"

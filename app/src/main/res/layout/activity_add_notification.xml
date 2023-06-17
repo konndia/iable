@@ -97,7 +97,8 @@
         app:cornerRadius="20dp"
         android:insetTop="6dp"
         android:textAllCaps="false"
-        android:textSize="18sp"/>
+        android:textSize="18sp"
+        android:background="@drawable/gray_stroke"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -116,56 +117,105 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="пн"
+        android:textSize="15sp"
+        android:button="@drawable/day_selector"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="400dp"/>
+        android:layout_marginTop="400dp"
+        android:background="@drawable/gray_stroke"/>
 
     <CheckBox
         android:id="@+id/tuesdayCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="вт"
+        android:textSize="15sp"
+        android:button="@null"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
         android:layout_marginStart="105dp"
-        android:layout_marginTop="400dp"/>
+        android:layout_marginTop="400dp"
+        android:background="@drawable/gray_stroke"/>
 
     <CheckBox
         android:id="@+id/wednesdayCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ср"
+        android:textSize="15sp"
+        android:button="@null"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
         android:layout_marginStart="175dp"
-        android:layout_marginTop="400dp"/>
+        android:layout_marginTop="400dp"
+        android:background="@drawable/gray_stroke"/>
 
     <CheckBox
         android:id="@+id/thursdayCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="чт"
+        android:textSize="15sp"
+        android:button="@null"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
         android:layout_marginStart="245dp"
-        android:layout_marginTop="400dp"/>
+        android:layout_marginTop="400dp"
+        android:background="@drawable/gray_stroke"/>
 
     <CheckBox
         android:id="@+id/fridayCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="пт"
+        android:textSize="15sp"
+        android:button="@null"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
         android:layout_marginStart="315dp"
-        android:layout_marginTop="400dp"/>
+        android:layout_marginTop="400dp"
+        android:background="@drawable/gray_stroke"/>
 
     <CheckBox
         android:id="@+id/saturdayCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="сб"
+        android:textSize="15sp"
+        android:button="@null"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
         android:layout_marginStart="35dp"
-        android:layout_marginTop="440dp"/>
+        android:layout_marginTop="440dp"
+        android:background="@drawable/gray_stroke"/>
 
     <CheckBox
         android:id="@+id/sundayCheckBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="вс"
+        android:textSize="15sp"
+        android:button="@null"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
         android:layout_marginStart="105dp"
-        android:layout_marginTop="440dp"/>
+        android:layout_marginTop="440dp"
+        android:background="@drawable/gray_stroke"/>
 
     <TextView
         android:layout_width="wrap_content"

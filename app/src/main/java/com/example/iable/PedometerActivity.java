@@ -100,9 +100,11 @@ public class PedometerActivity extends AppCompatActivity implements SensorEventL
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     weight = snapshot.child("weight").getValue(String.class);
+
                     int weightNumber = Integer.parseInt(weight.trim());
                     double kCalOnMeter = averageKcal * weightNumber / 1000;
                     int kCalValue = (int) (kCalOnMeter * distance);
+
                     kcal.setText(kCalValue + " cal");
                 }
 
@@ -110,10 +112,6 @@ public class PedometerActivity extends AppCompatActivity implements SensorEventL
                 public void onCancelled(@NonNull DatabaseError error) {
                 }
             });
-
-//            User user = new User();
-//            user.setStepsCount(currentSteps, "steps");
-//            users.child(FirebaseAuth.getInstance().getCurrentUser().getUid()).setValue(user);
         }
     }
 
@@ -140,13 +138,13 @@ public class PedometerActivity extends AppCompatActivity implements SensorEventL
     private void saveData() {
         SharedPreferences sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putString("key1", String.valueOf(previewsTotalSteps));
+        editor.putString("key2", String.valueOf(previewsTotalSteps));
         editor.apply();
     }
 
     private void loadData() {
         SharedPreferences sharedPref = getSharedPreferences("myPref", Context.MODE_PRIVATE);
-        int savedNumber = Integer.parseInt(sharedPref.getString("key1", "0"));
+        int savedNumber = Integer.parseInt(sharedPref.getString("key2", "0"));
         previewsTotalSteps = savedNumber;
     }
 

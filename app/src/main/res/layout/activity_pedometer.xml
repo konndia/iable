@@ -64,8 +64,7 @@
         android:layout_height="24dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="50dp"
-        android:background="null"
-        android:backgroundTint="@color/white"
+        android:background="@null"
         android:scaleType="fitXY"
         app:srcCompat="@drawable/arrow_back" />
 
@@ -127,7 +126,7 @@
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:fontFamily="@font/ubuntu_medium"
-                android:text="0 ккал"/>
+                android:text="0 cal"/>
         </RelativeLayout>
     </LinearLayout>
 

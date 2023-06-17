@@ -37,7 +37,8 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="100dp"
         android:textColor="#000000"
-        android:textSize="24sp">
+        android:textSize="24sp"
+        android:text="Доброе утро">
 
     </TextView>
 
@@ -49,7 +50,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="20dp"
         android:layout_below="@+id/greeting"
-        android:text=""
+        android:text="Хорошего дня!"
         android:textColor="#000000"
         android:textSize="15sp">
     </TextView>
@@ -117,14 +118,27 @@
                 android:layout_marginStart="3dp">
 
                 <TextView
+                    android:id="@+id/TextView100"
+                    android:layout_width="182dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/ubuntu_medium"
+                    android:text="Выпитая вода"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <TextView
                     android:id="@+id/waterTextView"
                     android:layout_width="182dp"
                     android:layout_height="wrap_content"
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
-                    android:layout_marginTop="31dp"
+                    android:layout_marginTop="45dp"
                     android:fontFamily="@font/ubuntu_medium"
-                    android:text="Выпитая вода"
+                    android:text="0 ml"
                     android:textAlignment="center"
                     android:textColor="#000000"
                     android:textSize="16sp" />
@@ -281,6 +295,7 @@
 >
 
                 <CheckBox
+                    android:id="@+id/water1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@drawable/water_selector">
@@ -293,6 +308,7 @@
                 android:layout_marginStart="15sp">
 
                 <CheckBox
+                    android:id="@+id/water2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@drawable/water_selector">
@@ -305,6 +321,7 @@
                 android:layout_marginStart="15sp">
 
                 <CheckBox
+                    android:id="@+id/water3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@drawable/water_selector">
@@ -317,6 +334,7 @@
                 android:layout_marginStart="15sp">
 
                 <CheckBox
+                    android:id="@+id/water4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@drawable/water_selector">
@@ -329,6 +347,7 @@
                 android:layout_marginStart="15sp">
 
                 <CheckBox
+                    android:id="@+id/water5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:button="@drawable/water_selector">
@@ -358,5 +377,6 @@
         app:itemIconTint="@drawable/item_selector"
         app:itemRippleColor="@android:color/transparent"
         app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/bottom_menu"></com.google.android.material.bottomnavigation.BottomNavigationView>
+        app:menu="@menu/bottom_menu">
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
 </RelativeLayout>

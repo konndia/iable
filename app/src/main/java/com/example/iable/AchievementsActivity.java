@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 
 public class AchievementsActivity extends AppCompatActivity {
 
-    RelativeLayout travelling;
+    RelativeLayout travelling, active_user, water;
     TextView user_name;
     String name;
     FirebaseDatabase db;
@@ -52,6 +52,24 @@ public class AchievementsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(AchievementsActivity.this, JourneyAchievementActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        active_user = findViewById(R.id.active_user_layout);
+        active_user.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AchievementsActivity.this, ActiveUserActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        water = findViewById(R.id.water_layout);
+        water.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AchievementsActivity.this, WaterActivity.class);
                 startActivity(intent);
             }
         });

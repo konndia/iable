@@ -50,18 +50,20 @@
         android:layout_marginBottom="395dp"
         android:ems="10"
         android:hint="Почта"
+        android:padding="15dp"
         android:inputType="textEmailAddress"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/gray_stroke"/>
 
     <Button
         android:id="@+id/button_sign_in"
         android:layout_width="120dp"
         android:layout_height="40dp"
         android:layout_marginStart="127dp"
-        android:layout_marginTop="424dp"
+        android:layout_marginTop="520dp"
         android:layout_marginEnd="128dp"
         android:layout_marginBottom="210dp"
         android:background="@drawable/gradient"
@@ -87,12 +89,14 @@
         android:layout_marginBottom="307dp"
         android:ems="10"
         android:hint="Пароль"
+        android:padding="15dp"
         android:inputType="textPassword"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.72"/>
+        app:layout_constraintVertical_bias="0.72"
+        android:background="@drawable/gray_stroke"/>
 
     <TextView
         android:id="@+id/textView"

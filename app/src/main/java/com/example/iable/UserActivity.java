@@ -1,13 +1,19 @@
 package com.example.iable;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.iable.Models.User;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -17,6 +23,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.rengwuxian.materialedittext.MaterialEditText;
 
 public class UserActivity extends AppCompatActivity {
 
@@ -24,6 +31,7 @@ public class UserActivity extends AppCompatActivity {
     String name, email, height, weight, age;
     FirebaseDatabase db;
     DatabaseReference users;
+    Button changeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,6 +112,27 @@ public class UserActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(UserActivity.this, DrawerMenuActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        changeButton = findViewById(R.id.changeButton);
+        changeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                if (user_email.getText().toString().isEmpty() || user_name.getText().toString().isEmpty()
+                        || user_height.getText().toString().isEmpty() || user_weight.getText().toString().isEmpty()
+                        || user_age.getText().toString().isEmpty()) {
+                    Toast.makeText(UserActivity.this, "Поля не могут быть пустыми", Toast.LENGTH_SHORT).show();
+                } else {
+                    users.child("email").setValue(user_email.getText().toString());
+                    users.child("weight").setValue(user_weight.getText().toString());
+                    users.child("height").setValue(user_height.getText().toString());
+                    users.child("age").setValue(user_age.getText().toString());
+                    users.child("name").setValue(user_name.getText().toString());
+
+                    Toast.makeText(UserActivity.this, "Данные успешно обновлены!", Toast.LENGTH_SHORT).show();
+                }
             }
         });
 

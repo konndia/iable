@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".JourneyAchievementActivity">
+    tools:context=".WaterActivity">
 
     <TextView
         android:layout_width="wrap_content"
@@ -12,7 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="79dp"
         android:fontFamily="@font/ubuntu_bold"
-        android:text="Путешествие"
+        android:text="Выпитая вода"
         android:textColor="#215273"
         android:textSize="20sp" />
 
@@ -32,14 +32,14 @@
     <RelativeLayout
         android:layout_width="400dp"
         android:layout_height="90dp"
-        android:background="@drawable/journey"
+        android:background="@drawable/water_gradient"
         android:layout_marginTop="150dp"
         android:layout_marginStart="15dp">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Сделайте свой первый шаг с нами!"
+            android:text="Выпейте свой первый стакан воды с нами!"
             android:maxWidth="200dp"
             android:textColor="@color/white"
             android:fontFamily="@font/ubuntu_medium"
@@ -74,13 +74,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Пройдите 10 км"
+            android:text="Выпейте 2 литра за один день"
             android:maxWidth="200dp"
             android:textColor="@color/white"
             android:fontFamily="@font/ubuntu_medium"
             android:textSize="16dp"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="20dp"/>
 
         <ImageView
             android:layout_width="45dp"
@@ -101,7 +101,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Пройдите 100 км"
+            android:text="Выпейте 10 литров воды"
             android:maxWidth="200dp"
             android:textColor="@color/white"
             android:fontFamily="@font/ubuntu_medium"
@@ -128,7 +128,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Пройдите 1000 км"
+            android:text="Выпейте 50 литров воды"
             android:maxWidth="200dp"
             android:textColor="@color/white"
             android:fontFamily="@font/ubuntu_medium"
@@ -155,39 +155,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Пройдите 10000 км"
+            android:text="Выпейте 100 литров воды"
             android:maxWidth="200dp"
             android:textColor="@color/white"
             android:fontFamily="@font/ubuntu_medium"
             android:textSize="16dp"
             android:layout_marginStart="50dp"
-            android:layout_marginTop="30dp"/>
-
-        <ImageView
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/minus"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="280dp"/>
-
-    </RelativeLayout>
-    <RelativeLayout
-        android:layout_width="400dp"
-        android:layout_height="90dp"
-        android:background="@drawable/not_done"
-        android:layout_marginTop="670dp"
-        android:layout_marginStart="15dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Пройдите 50000 км"
-            android:maxWidth="200dp"
-            android:textColor="@color/white"
-            android:fontFamily="@font/ubuntu_medium"
-            android:textSize="16dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="20dp"/>
 
         <ImageView
             android:layout_width="45dp"
